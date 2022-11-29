@@ -1,7 +1,12 @@
-function PostcardImage({imageSrc}){
+function PostcardImage({imageSrc, isDarkMode}){
     return (
         <div className="postcard__image">
-            <img alt="beach" src={imageSrc} />
+            {
+                isDarkMode? 
+                <img className="dark-image" alt="beach" src={imageSrc} />
+               : 
+               <img alt="beach" src={imageSrc} />
+            } 
         </div>
     )
 }
